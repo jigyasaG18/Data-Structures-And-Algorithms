@@ -95,5 +95,5 @@ The repository is organized into the following folders, each containing specific
 
 
 
-## Dive into the code, challenge yourself with the problems, and unlock the power of data structures and algorithms. Each line of code brings you one step closer to mastering the art of programming. Happy coding, and enjoy your journey through the world of algorithms be exciting and rewarding!
+### Dive into the code, challenge yourself with the problems, and unlock the power of data structures and algorithms. Each line of code brings you one step closer to mastering the art of programming. Happy coding, and enjoy your journey through the world of algorithms be exciting and rewarding!
 
