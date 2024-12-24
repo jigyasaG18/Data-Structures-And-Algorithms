@@ -1,0 +1,66 @@
+Parenthesis Checker
+You are given a string s representing an expression containing various types of brackets: {}, (), and []. Your task is to determine whether the brackets in the expression are balanced. A balanced expression is one where every opening bracket has a corresponding closing bracket in the correct order.
+
+Examples :
+
+Input: s = "{([])}"
+Output: true
+Explanation: 
+- In this expression, every opening bracket has a corresponding closing bracket.
+- The first bracket { is closed by }, the second opening bracket ( is closed by ), and the third opening bracket [ is closed by ].
+- As all brackets are properly paired and closed in the correct order, the expression is considered balanced.
+
+Input: s = "()"
+Output: true
+Explanation: 
+- This expression contains only one type of bracket, the parentheses ( and ).
+- The opening bracket ( is matched with its corresponding closing bracket ).
+- Since they form a complete pair, the expression is balanced.
+
+Input: s = "([]"
+Output: false
+Explanation: 
+- This expression contains only one type of bracket, the parentheses ( and ).
+- The opening bracket ( is matched with its corresponding closing bracket ).
+- Since they form a complete pair, the expression is balanced.
+Constraints:
+1 ≤ s.size() ≤ 106
+s[i] ∈ {'{', '}', '(', ')', '[', ']'}
+
+
+
+
+
+
+
+class Solution
+{
+    public:
+    //Function to check if brackets are balanced or not.
+    bool ispar(string x)
+    {
+        // Your code here
+         stack<char> s;
+    
+        for(char c : x) {
+            if(c == '{' || c == '(' || c == '[') {
+                s.push(c);
+            } else {
+                if(s.empty()) {
+                    return false;
+                }
+                
+                char t = s.top();
+                
+                if((c == '}' && t == '{') || (c == ']' && t == '[') || (c == ')' && t == '(')) {
+                    s.pop(); 
+                } else {
+                    return false;
+                }
+            }
+        }
+        
+        return s.empty();
+    }
+
+};
